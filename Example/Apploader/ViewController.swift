@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import MBProgressHUD
+import Apploader
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AppLoaderProtocol {
+    
+    var alertHud: MBProgressHUD!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        setupLoader()
+        
+        alertHud!.showLoader(msg: "loading...")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupLoader() {
+        self.alertHud = MBProgressHUD(view: self.view)
+        self.view.addSubview(self.alertHud)
     }
-
 }
 

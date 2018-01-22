@@ -3,9 +3,4 @@ use_frameworks!
 target 'Apploader_Example' do
   pod 'Apploader', :path => '../'
 
-  target 'Apploader_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
