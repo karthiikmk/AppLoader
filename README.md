@@ -19,6 +19,26 @@ it, simply add the following line to your Podfile:
 pod 'Apploader'
 ```
 
+
+## Usage
+
+```swift
+   var alertHud: MBProgressHUD!
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupLoader()
+        
+        alertHud.showLoader(msg: "loading...")
+    }
+    
+    func setupLoader() {
+        self.alertHud = MBProgressHUD(view: self.view)
+        self.view.addSubview(self.alertHud)
+    }
+```
+
 ## Author
 
 karthikAdaptavant, karthik.samy@a-cti.com
