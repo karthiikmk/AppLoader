@@ -1,6 +1,5 @@
 # Apploader
 
-[![CI Status](http://img.shields.io/travis/karthikAdaptavant/Apploader.svg?style=flat)](https://travis-ci.org/karthikAdaptavant/Apploader)
 [![Version](https://img.shields.io/cocoapods/v/Apploader.svg?style=flat)](http://cocoapods.org/pods/Apploader)
 [![License](https://img.shields.io/cocoapods/l/Apploader.svg?style=flat)](http://cocoapods.org/pods/Apploader)
 [![Platform](https://img.shields.io/cocoapods/p/Apploader.svg?style=flat)](http://cocoapods.org/pods/Apploader)
