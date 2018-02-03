@@ -5,8 +5,25 @@
 //  Created by Karthik on 1/23/18.
 //
 
+import UIKit
 import Foundation
 import MBProgressHUD
+
+public extension UIViewController {
+    
+    public func getAlertHUD(srcView: UIView) -> MBProgressHUD {
+        
+        let hud = MBProgressHUD(view: srcView)
+        
+        //Force Unwrapping - assuming hud will not be nil
+        srcView.addSubview(hud)
+        hud.color = UIColor(red: 53, green: 63, blue: 77, alpha: 1)
+        hud.bezelView.backgroundColor = .black
+        hud.contentColor = .white
+        hud.label.textColor = .white
+        return hud
+    }
+}
 
 
 public protocol AppLoaderProtocol {
@@ -69,7 +86,7 @@ public extension MBProgressHUD {
         self.setupLoader()
         self.setText(msg: "")
         self.mode = .indeterminate
-        self.yOffset = Float (self.frame.size.height/2.5)
+        self.yOffset = self.frame.size.height/2.5
         self.show(true)
         self.setDelay(delay: delay, tapToClose: true)
     }

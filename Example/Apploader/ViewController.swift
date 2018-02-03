@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 import Apploader
 
 class ViewController: UIViewController, AppLoaderProtocol {
@@ -19,11 +18,11 @@ class ViewController: UIViewController, AppLoaderProtocol {
         
         setupLoader()
         
-        alertHud!.showLoader(msg: "loading...")
+        alertHud.showLoader(msg: "loading...")
     }
     
     func setupLoader() {
-        self.alertHud = MBProgressHUD(view: self.view)
+        self.alertHud = self.getAlertHUD(srcView: self.view)
         self.view.addSubview(self.alertHud)
     }
 }

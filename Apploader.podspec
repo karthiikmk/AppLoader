@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Apploader/Classes/**/*'
   s.public_header_files = 'Apploader/Classes/**/*.h'
-  s.dependency 'MBProgressHUD', '~> 0.9'
+  s.dependency 'MBProgressHUD', '~> 1.0.0'
 
 end
